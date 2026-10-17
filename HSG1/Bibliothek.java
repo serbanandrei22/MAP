@@ -48,6 +48,22 @@ public class Bibliothek {
         }
         return rez;
     }
+    public Book getTeuersteBook(List<Book> bookListe){
+        if(bookListe == null || bookListe.isEmpty()){
+            return null ;
+        }
+        Book t=bookListe.get(0);
+        for(int i=1;i<bookListe.size();i++){
+            Book b=bookListe.get(i);
+            if(b.getPreis()>t.getPreis()){
+                t=b;
+            }
+
+        }
+        return t;
+
+    }
+
 }
 
 

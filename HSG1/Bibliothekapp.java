@@ -71,5 +71,15 @@ public class Bibliothekapp {
         }
 
         System.out.println();
+
+        //5.
+        System.out.println("Mindestanzahl: 300 Seiten");
+        System.out.println("Ergebnis:");
+        List<Book> ab300Seiten = bibliothek.getBucherMindenstenSeiten(alleBucher, 300);
+        for (int i = 0; i < ab300Seiten.size(); i++) {
+            System.out.println(ab300Seiten.get(i).getTitel());
+        }
+
+        System.out.println();
     }
 }

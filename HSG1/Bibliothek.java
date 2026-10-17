@@ -13,4 +13,16 @@ public class Bibliothek {
         return this.bucher;
     }
 
+    public List<Book> getBucherVonAutor(String autor){
+        List<Book> rez=new ArrayList<>();
+        for(int i =0;i<this.bucher.size();i++){
+            Book b=this.bucher.get(i);
+            if(b.getAutor().equalsIgnoreCase(autor)){
+                rez.add(b);
+            }
+        }
+        return rez;
+    }
 }
+
+

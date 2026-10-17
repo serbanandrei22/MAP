@@ -18,7 +18,7 @@ public class Bibliothekapp {
         bibliothek.BookHinzufugen(b5);
 
         List<Book> alleBucher = bibliothek.getBucher();
-
+        //1.
         System.out.println("Autor: George Orwell");
         System.out.println("Ergebnis:");
         List<Book> orwellBucher = bibliothek.getBucherVonAutor("George Orwell");
@@ -27,6 +27,22 @@ public class Bibliothekapp {
         }
 
         System.out.println();
+
+        //2.
+        List<Book> teilListe2 = new ArrayList<>();
+        teilListe2.add(b1);
+        teilListe2.add(b2);
+        teilListe2.add(b3);
+
+        for (int i = 0; i < teilListe2.size(); i++) {
+            Book b = teilListe2.get(i);
+            System.out.println(b.getTitel() + " -> " + b.getAnzahlseiten() + " Seiten");
+        }
+        System.out.println("Ergebnis:");
+        double durchschnitt = bibliothek.DurchschnittSeitenAnzahl(teilListe2);
+        double gerundet = Math.round(durchschnitt * 100.0) / 100.0;
+        System.out.println(gerundet);
+
 
     }
 }

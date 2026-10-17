@@ -35,7 +35,19 @@ public class Bibliothek {
         return (double) summe/ bookListe.size();
 
     }
+    public List<Book> getPreislimit(List<Book> bookListe, double maxPreis){
+        List<Book> rez= new ArrayList<>();
+        if (bookListe != null){
+            for (int i = 0; i<bookListe.size(); i++) {
+                Book b = bookListe.get(i);
+                if (b.getPreis() <= maxPreis) {
+                    rez.add(b);
+                }
+            }
 
+        }
+        return rez;
+    }
 }
 
 

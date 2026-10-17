@@ -42,6 +42,7 @@ public class Bibliothekapp {
         double durchschnitt = bibliothek.DurchschnittSeitenAnzahl(teilListe2);
         double gerundet = Math.round(durchschnitt * 100.0) / 100.0;
         System.out.println(gerundet);
+        System.out.println();
 
         //3.
         System.out.println("Maximaler Preis: 30 Euro");

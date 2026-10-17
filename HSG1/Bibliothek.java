@@ -75,8 +75,39 @@ public class Bibliothek {
         }
         return rez;
     }
+    public List<Book> getZweiBucher(List<Book> bookliste,double buget){
+        List<Book> rez=new ArrayList<>();
+        if (bookliste == null || bookliste.isEmpty()){
+            return rez;
+        }
+        double maxP=-1.0;
+        int maxS=-1;
+        Book g1=null;
+        Book g2=null;
 
+        for(int i =0; i<bookliste.size();i++){
+            for(int j=i+1;j<bookliste.size();j++){
+                Book b1=bookliste.get(i);
+                Book b2=bookliste.get(j);
 
+                double summeP=b1.getPreis()+b2.getPreis();
+                if(summeP<= buget){
+                    int summeS=b1.getAnzahlseiten()+b2.getAnzahlseiten();
+                    if(summeP> maxP || (summeP == maxP && summeS>maxS)){
+                        maxP=summeP;
+                        maxS=summeS;
+                        g1=b1;
+                        g2=b2;
+                    }
+                }
+            }
+        }
+        if(g1 != null && g2 !=null){
+            rez.add(g1);
+            rez.add(g2);
+        }
+        return rez;
+    }
 }
 
 

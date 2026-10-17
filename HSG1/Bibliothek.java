@@ -23,6 +23,19 @@ public class Bibliothek {
         }
         return rez;
     }
+    public double DurchschnittSeitenAnzahl(List<Book> bookListe){
+        if(bookListe == null || bookListe.isEmpty()){
+            return 0.0;
+        }
+        int summe=0;
+        for(int i=0;i<bookListe.size();i++){
+            Book b=bookListe.get(i);
+            summe=summe+b.getAnzahlseiten();
+        }
+        return (double) summe/ bookListe.size();
+
+    }
+
 }
 
 

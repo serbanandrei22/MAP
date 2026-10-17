@@ -19,5 +19,14 @@ public class Bibliothekapp {
 
         List<Book> alleBucher = bibliothek.getBucher();
 
+        System.out.println("Autor: George Orwell");
+        System.out.println("Ergebnis:");
+        List<Book> orwellBucher = bibliothek.getBucherVonAutor("George Orwell");
+        for (int i = 0; i < orwellBucher.size(); i++) {
+            System.out.println(orwellBucher.get(i).getTitel());
+        }
+
+        System.out.println();
+
     }
 }

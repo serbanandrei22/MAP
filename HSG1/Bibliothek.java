@@ -63,6 +63,19 @@ public class Bibliothek {
         return t;
 
     }
+    public List<Book> getBucherMindenstenSeiten(List<Book> bookListe,int m){
+        List<Book> rez=new ArrayList<>();
+        if(bookListe != null){
+            for(int i=0;i< bookListe.size();i++){
+                Book b=bookListe.get(i);
+                if(b.getAnzahlseiten()>=m){
+                    rez.add(b);
+                }
+            }
+        }
+        return rez;
+    }
+
 
 }
 

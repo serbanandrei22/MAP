@@ -43,6 +43,15 @@ public class Bibliothekapp {
         double gerundet = Math.round(durchschnitt * 100.0) / 100.0;
         System.out.println(gerundet);
 
+        //3.
+        System.out.println("Maximaler Preis: 30 Euro");
+        System.out.println("Ergebnis:");
+        List<Book> bis30Euro = bibliothek.getPreislimit(alleBucher, 30);
+        for (int i = 0; i < bis30Euro.size(); i++) {
+            Book b = bis30Euro.get(i);
+            System.out.println(b.getTitel() + " -> " + (int) b.getPreis() + " Euro");
+        }
 
+        System.out.println();
     }
 }

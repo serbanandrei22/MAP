@@ -81,5 +81,16 @@ public class Bibliothekapp {
         }
 
         System.out.println();
+
+        //6.
+        System.out.println("Budget: 55 Euro");
+        System.out.println("Ergebnis:");
+        List<Book> paar = bibliothek.getZweiBucher(alleBucher, 55);
+        if (paar.size() == 2) {
+            Book bA = paar.get(0);
+            Book bB = paar.get(1);
+            System.out.println(bA.getTitel() + " + " + bB.getTitel());
+            System.out.println("Gesamtpreis: " + (int) (bA.getPreis() + bB.getPreis()) + " Euro");
+        }
     }
 }

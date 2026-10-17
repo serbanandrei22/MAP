@@ -102,7 +102,7 @@ public class Bibliothek {
                 }
             }
         }
-        if(g1 != null && g2 !=null){
+        if(g1 != null && g2 != null){
             rez.add(g1);
             rez.add(g2);
         }

@@ -53,5 +53,23 @@ public class Bibliothekapp {
         }
 
         System.out.println();
+
+        //4.
+        List<Book> teilListe4 = new ArrayList<>();
+        teilListe4.add(b2);
+        teilListe4.add(b3);
+        teilListe4.add(b5);
+
+        for (int i = 0; i < teilListe4.size(); i++) {
+            Book b = teilListe4.get(i);
+            System.out.println(b.getTitel() + " -> " + (int) b.getPreis() + " Euro");
+        }
+        System.out.println("Ergebnis:");
+        Book t = bibliothek.getTeuersteBook(teilListe4);
+        if (t != null) {
+            System.out.println(t.getTitel() + " (" + (int) t.getPreis() + " Euro)");
+        }
+
+        System.out.println();
     }
 }
